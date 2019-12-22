@@ -41,7 +41,7 @@ mount_crypto_volume() {
 	    echo + Please enter passphrase for ${uuid} \(${name}\).
 	    ${CRYPTSETUP} open --type luks $DEV_FILE $DISC_NAME
 	else
-	    echo ${PASSPHRASE} | ${CRYPTSETUP} open --luks $DEV_FILE $DISC_NAME
+	    echo ${PASSPHRASE} | ${CRYPTSETUP} open --type luks $DEV_FILE $DISC_NAME
 	fi
 	
 	# check if mount point exists
@@ -97,7 +97,7 @@ umount_crypto_volume() {
 	${CRYPTSETUP} close ${DISC_NAME}
 	sleep_disk ${DEV_FILE}
     else
-	echo "+ Can't unmount ${DISC_NAME}"
+	echo "+ Disk ${DISC_NAME} is not mounted."
     fi
 }
 
