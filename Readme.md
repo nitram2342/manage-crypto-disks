@@ -27,11 +27,18 @@ from you backup script or from cron and then power them off using the
 $ manage_crypto_disks.sh poweroff
 ```
 
-Which devices exists are configured in a config file. This config file stores
-the disk's UUIDs, a mount point name and the LUKS passphrase. An example is
-shown in config.dat.example in this repository. If you do not want to store
-LUKS passphrases in the config file, you could enter a dash ('-'). Then the
-script will prompt for a passphrase
+Devices are configured in a config file. This config file stores
+the disk's UUIDs, a mount point name and the LUKS passphrase. If
+you do not want to store LUKS passphrases in the config file, you
+could enter a dash ('-'). Then the script will prompt for a passphrase.
+An example is shown below:
+
+```
+bc686425-53e6-4d7e-a51a-f47bcdac1bdb	backup_21	-
+9fc10fb6-ab53-4262-8ea8-250be2c7783a	backup_22	-
+809a092e-65a2-4ee7-982d-a680deadbeef	backup_23	secretsecret
+120c888f-596b-4479-ac9d-53cd9969ad15	backup_24	anotherpassphrase
+```
 
 You could specify the config file as parameter:
 
