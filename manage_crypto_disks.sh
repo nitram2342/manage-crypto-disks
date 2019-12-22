@@ -78,7 +78,7 @@ sleep_disk() {
     
     echo + Put HDD to rest
     if [ -f ${DEV_FILE} ] ; then
-	${HDPARM} -S 1 ${DEV_FILE}
+	${HDPARM} -y ${DEV_FILE}
     fi
 }
 
