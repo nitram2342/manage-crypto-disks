@@ -46,7 +46,7 @@ You could specify the config file as parameter:
 $ manage_crypto_disks.sh mount disk_set_2.dat
 ```
 
-# Security consideration
+# Security considerations
 
 LUKS passphrases might be stored in a config file on the system. 
 Users with elevated privileges may access the config
@@ -72,8 +72,8 @@ Recommendations:
   config file in a temp file system. Then it vanishes on power-down,
   but it will not prevent local privileged users from accessing it.
 
-License
---------
+# License
 
-See LICENSE
-
+The script is published under a BSD license with a non-military
+clause. Please read the details in the file LICENSE that is included
+in this repository.
