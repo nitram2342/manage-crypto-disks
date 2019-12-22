@@ -16,7 +16,7 @@ $ manage_crypto_disks.sh mount
 To unmount them run:
 
 ```
-$ manage_crypto_disks.sh mount.
+$ manage_crypto_disks.sh unmount
 ```
 
 For example when you know you rotate disks Fridays, you could unmount disks
