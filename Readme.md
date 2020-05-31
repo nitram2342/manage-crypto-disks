@@ -1,4 +1,4 @@
-This is a helper script to manage removable crypto disks from a Linux host
+This is a helper script to manage removable crypto disks on a Linux host
 for backup purposes. The idea is to run the script and mount available
 crypto disks and to unmount them if they are not needed for operation or when
 disks are moved to an offsite location.
